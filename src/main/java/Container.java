@@ -9,22 +9,16 @@ public class Container<T> {
      * Внутренний приватный класс, представляющий узел в связанном списке.
      */
     class Node {
-        T data;       // Данные, хранящиеся в узле
-        Node next;    // Ссылка на следующий узел в списке
+        T data;
+        Node next;
 
-        /**
-         * Конструктор по умолчанию, инициализирующий узел с null данными и ссылкой на следующий узел.
-         */
+
         public Node() {
             this.data = null;
             this.next = null;
         }
 
-        /**
-         * Конструктор, инициализирующий узел с указанными данными.
-         *
-         * @param data данные, которые будут храниться в узле
-         */
+
         public Node(T data) {
             this.data = data;
             this.next = null;
@@ -32,21 +26,15 @@ public class Container<T> {
     }
 
     private int size;   // Количество элементов в контейнере
-    private Node head;  // Голова (первый узел) связного списка
+    private Node head;
 
-    /**
-     * Конструктор, создающий пустой контейнер.
-     */
+
     public Container() {
         this.head = null;
         this.size = 0;
     }
 
-    /**
-     * Конструктор, создающий контейнер с одним элементом.
-     *
-     * @param data начальные данные, которые будут храниться в контейнере
-     */
+
     public Container(T data) {
         this.head = new Node(data);
         this.size = 1;
